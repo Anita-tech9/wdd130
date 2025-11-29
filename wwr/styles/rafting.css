@@ -1,6 +1,6 @@
 :root {
     --primary-color: #055a05; /* forest green */
-    --secondary-color: white; /*white */
+    --secondary-color: #fff; /*white */
     --accent1-color: #264653; /* dark slate blue */
     --accent2-color: #e9c46a; /* light golden yellow */
     --heading-font: "Times New Roman", "Georgia", serif;
@@ -10,7 +10,28 @@
 header{
     background-color: var(--secondary-color);
     color: var(--accent2-color);
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
 
+header img {
+    width: 100px;
+    padding: 10px;
+}
+
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+.nav{
+    display: grid;
+    justify-content: space-around;
+}
+
+.navigation li {
+    flex: 1 1 auto;
 }
 
 * {
@@ -34,6 +55,44 @@ h1, h2 {
     color: var(--primary-color);
 }
 
+
+.history-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.adventures-section {
+    display: flex;
+    justify-content: space-around;
+    grid-template-columns:repeat(5, 1fr);
+}
+
+figure img {
+    display: flex;
+    align-items: center;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 20%;
+    float: left;
+    
+}
+
+figure {
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+}
+
+section {
+    margin: 1em auto;
+    padding: 1em;
+    border: 1px solid rgb(0 0 0 / 10%);
+    background-color: var(--secondary-color);
+    width: min(800px, 100%);
+}
+
 nav, p, section {
     margin: 10px;
     padding: 16px;
@@ -43,11 +102,32 @@ nav, p, section {
 
 .socialmedia a {
     text-decoration: none;
-}
-.hero {
-    position: relative;
+    align-items: center;
+    margin: 10px;
+    padding: 16px;
 }
 
+footer img {
+    float: right;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero h1{
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    font-size: 2.5rem;
+
+}
+
+p {
+    margin-top: 0;
+    text-align: center;
+}
 .hero img {
     display: block;
     width: 100%;
@@ -72,5 +152,9 @@ h1 {
 }
 
 h2, h3{
-    padding: 10px
+    padding: 10px;
+    text-align: center;
+    position: relative;
 }
+
+
