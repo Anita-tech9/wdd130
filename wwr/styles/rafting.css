@@ -1,6 +1,6 @@
 :root {
     --primary-color: #055a05; /* forest green */
-    --secondary-color: #f4a261; /*warm sand */
+    --secondary-color: #B97375; /*warm sand */
     --accent1-color: #264653; /* dark slate blue */
     --accent2-color: #e9c46a; /* light golden yellow */
     --heading-font: "Times New Roman", "Georgia", serif;
@@ -34,10 +34,12 @@ h1, h2 {
     color: var(--primary-color);
 }
 
-nav, p, section, article {
+nav, p, section {
     margin: 10px;
-    padding: 1px;
+    padding: 16px;
+
 }
+
 
 .socialmedia a {
     text-decoration: none;
@@ -66,6 +68,7 @@ h1 {
 .hero article img {
     float: right;
     width: 125px;
+    position: relative;
 }
 
 h2, h3{
