@@ -1,160 +1,132 @@
 :root {
-    --primary-color: #055a05; /* forest green */
-    --secondary-color: #fff; /*white */
-    --accent1-color: #264653; /* dark slate blue */
-    --accent2-color: #e9c46a; /* light golden yellow */
-    --heading-font: "Times New Roman", "Georgia", serif;
-    --body-font: Arial, Helvetica, san-serif;
+  --primary-color: #0a3d62; /* ox blood */
+  --secondary-color: #3c9ee7; /* white */
+  --accent1-color: #1c2833; /* pink */
+  --accent2-color: #f7931e; /* sand*/
+  --heading-font: "Times New Roman", "Georgia", serif;
+  --body-font: robotat, Arial, sans-serif;
 }
 
-header{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
     background-color: var(--secondary-color);
     color: var(--accent2-color);
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto 1fr;
     align-items: center;
-}
+  }
 
 header img {
     width: 100px;
+    height: auto;
     padding: 10px;
+  }
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
 }
 
-nav a {
+nav ul li a{
     padding: 10px;
     text-decoration: none;
     color: black;
 }
-.nav{
-    display: grid;
-    justify-content: space-around;
+
+nav ul li a:hover{
+    background-color: var(--accent1-color);
+    color: var(--accent2-color);
 }
 
-.navigation li {
-    flex: 1 1 auto;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
-}
-
-header, main, footer {
+header, main, footer{
     width: 840px;
-    margin: 0 auto;
+    margin: o auto;
+}
+
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
 }
 
 h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
+  font-family: var(--heading-font);
+  color: var(--primary-color);
 }
 
-
-.history-section{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.adventures-section {
-    display: flex;
-    justify-content: space-around;
-    grid-template-columns:repeat(5, 1fr);
-}
-
-figure img {
-    display: flex;
-    align-items: center;
-    grid-template-rows: 1fr 1fr;
-    justify-content: space-between;
-    gap: 1rem;
-    width: 20%;
-    float: left;
-    
-}
-
-figure {
-    flex: 1;
-    margin: 5px;
-    text-align: center;
-}
-
-section {
-    margin: 1em auto;
-    padding: 1em;
-    border: 1px solid rgb(0 0 0 / 10%);
-    background-color: var(--secondary-color);
-    width: min(800px, 100%);
-}
-
-nav, p, section {
-    margin: 10px;
-    padding: 16px;
-
-}
-
-
-.socialmedia a {
-    text-decoration: none;
-    align-items: center;
-    margin: 10px;
-    padding: 16px;
-}
-
-footer img {
-    float: right;
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
 }
 
 .hero {
-    position: relative;
-    text-align: center;
+  position: relative;
 }
 
-.hero h1{
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    font-size: 2.5rem;
-
-}
-
-p {
-    margin-top: 0;
-    text-align: center;
-}
 .hero img {
     display: block;
     width: 100%;
     height: auto;
-}
-
-h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #fff; /* white text - make sure there is enough contrast with the black */
-}
+  }
 
 .hero article img {
     float: right;
-    width: 125px;
-    position: relative;
+    width: 150px;
+    height: auto;
 }
 
-h2, h3{
-    padding: 10px;
-    text-align: center;
-    position: relative;
+.hero article{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    bottom: 10px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 0.5rem;
+    border-radius: 8px;
+    color: #fff;
 }
 
+h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--accent1-color);
+  color: #fff; /* white text – make sure there is enough contrast with the background-color */
+}
 
+h1{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 7px;
+    padding: 20px;
+    display: grid;
+}
+footer{
+    display: grid;
+    grid-template-columns: auto 200px;
+    align-items: center;
+    color: var(--accent1-color);
+}
+
+.socialmedia{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img{
+    width: 30px;
+    height: 30px;
+}
